@@ -1,30 +1,31 @@
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import ListAnime from './src/components/ListAnime';
+import { View, Text, StyleSheet } from 'react-native';
+import ListaPaises from './src/components/List';
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.title}>Anime List</Text>
-        <ListAnime />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <View style={styles.container}>
+      <StatusBar style="dark" />
+
+      <Text style={styles.titulo}>Lista de Anime</Text>
+
+      <ListaPaises />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    backgroundColor: '#f1f5f9',
+    paddingTop: 40,
   },
-  title: {
-    fontSize: 24,
+  titulo: {
+    fontSize: 26,
     fontWeight: 'bold',
-    margin: 16,
-    color: '#529aec',
+    textAlign: 'center',
+    color: '#2563eb',
+    padding: 16,
   },
 });
